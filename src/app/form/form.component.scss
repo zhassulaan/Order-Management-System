@@ -1,3 +1,21 @@
+@keyframes button-animation-in {
+  0% {
+    width: 1px;
+    height: 1px;
+  } 100% {
+    width: 400px;
+    height: 400px;
+  }
+}
+@keyframes button-animation-out {
+  0% {
+    width: 400px;
+    height: 400px;
+  } 100% {
+    width: 1px;
+    height: 1px;
+  }
+}
 .form {
   display: flex;
   justify-content: space-between;
