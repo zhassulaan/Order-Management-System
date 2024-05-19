@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "order-management-system": {
+    "Order-Management-System": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "order-management-system:build:production"
+              "buildTarget": "Order-Management-System:build:production"
             },
             "development": {
-              "buildTarget": "order-management-system:build:development"
+              "buildTarget": "Order-Management-System:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "order-management-system:build"
+            "buildTarget": "Order-Management-System:build"
           }
         },
         "test": {
@@ -104,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": "90c8378c-b1dd-4d86-a6e4-db73ddcf1663"
+    "analytics": "f1820d77-2822-40e2-a831-0431da62a08e"
   }
 }
