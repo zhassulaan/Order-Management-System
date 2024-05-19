@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  width: inherit;
+  height: 40px;
+  &__cell {
+    width: calc(100% / 4);
+    padding: 12px 24px;
+  }
+}

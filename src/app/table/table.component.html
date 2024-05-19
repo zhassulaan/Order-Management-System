@@ -1,0 +1,41 @@
+<div class="table">
+  <form class="form" #order="ngForm" (ngSubmit)="addOrder(order.value)">
+    <mat-form-field class="form__input">
+      <mat-label>Order name</mat-label>
+      <input matInput type="text" name="orderName" ngModel placeholder="Write name of order" />
+    </mat-form-field>
+    <mat-form-field class="form__input">
+      <mat-label>Quantity</mat-label>
+      <input matInput type="number" name="quantity" ngModel placeholder="How many" />
+    </mat-form-field>
+    <mat-form-field class="form__input">
+      <mat-label>Unit price</mat-label>
+      <input matInput type="number" name="unitPrice" ngModel placeholder="Give me price" />
+    </mat-form-field>
+    <button mat-flat-button color="primary" type="submit" class="form__button">
+      <p class="form__button__text">Add order</p>
+    </button>
+  </form>
+  
+  <app-header />
+  
+  <div class="table__body">
+    <div class="row" *ngFor="let order of orders">
+      <div matColumnDef="orderName" class="row__cell">
+        <p mat-cell class="row__cell__text">{{ order.orderName }}</p>
+      </div>
+    
+      <div matColumnDef="quantity" class="row__cell">
+        <p mat-cell class="row__cell__text">{{ order.quantity }}</p>
+      </div>
+    
+      <div matColumnDef="unitPrice" class="row__cell">
+        <p mat-cell class="row__cell__text">{{ order.unitPrice }}</p>
+      </div>
+      
+      <div matColumnDef="Delete" class="row__cell" (click)="deleteOrder(order.id)">
+        <p mat-cell class="row__cell__text row__cell__text_delete">X</p>
+      </div>
+    </div>
+  </div>
+</div>
