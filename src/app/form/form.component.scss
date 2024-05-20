@@ -7,7 +7,7 @@
   height: 63px;
   padding: 11px 23px 12px;
   background-color: #FFF;
-  &__input {
+  &__field {
     border-radius: 8px;
     width: 100%;
     background-color: #F7F9FC;
@@ -33,5 +33,12 @@
     &:valid {
       background-color: #F7F9FC;
     }
+    .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align {
+      display: none !important;
+    }
+  }
+  &__input {
+    height: 100%;
+    background-color: inherit;
   }
 }

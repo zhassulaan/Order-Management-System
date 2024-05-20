@@ -44,9 +44,4 @@
   &:hover::before {
     animation: button-animation-in 2.5s;
   }
-  &__text {
-    z-index: 2;
-    font-size: 14px;
-    color: #FFF;
-  }
 }
