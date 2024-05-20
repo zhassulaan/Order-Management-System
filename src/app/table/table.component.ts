@@ -26,5 +26,4 @@ export class TableComponent {
   deleteOrder(index: number) {
     this.orders = this.orders.filter(order => order.id !== index);
   }
-  resetForm() {}
 }

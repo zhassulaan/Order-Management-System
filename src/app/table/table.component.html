@@ -1,9 +1,9 @@
 <div class="table">
   <app-form (orderAdded)="addOrder($event)"></app-form>
-  
   <app-header />
   
   <div class="table__body">
+    <!-- <app-row *ngFor="let order of orders" [order]="order" [deleteOrder]="deleteOrder.bind(this)"></app-row> -->
     <div class="row" *ngFor="let order of orders">
       <div matColumnDef="orderName" class="row__cell">
         <p mat-cell class="row__cell__text">{{ order.orderName }}</p>
