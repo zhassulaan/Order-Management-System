@@ -3,23 +3,6 @@
   <app-header />
   
   <div class="table__body">
-    <!-- <app-row *ngFor="let order of orders" [order]="order" [deleteOrder]="deleteOrder.bind(this)"></app-row> -->
-    <div class="row" *ngFor="let order of orders">
-      <div matColumnDef="orderName" class="row__cell">
-        <p mat-cell class="row__cell__text">{{ order.orderName }}</p>
-      </div>
-    
-      <div matColumnDef="quantity" class="row__cell">
-        <p mat-cell class="row__cell__text">{{ order.quantity }}</p>
-      </div>
-    
-      <div matColumnDef="unitPrice" class="row__cell">
-        <p mat-cell class="row__cell__text">{{ order.unitPrice }}</p>
-      </div>
-      
-      <div matColumnDef="Delete" class="row__cell" (click)="deleteOrder(order.id)">
-        <p mat-cell class="row__cell__text row__cell__text_delete">X</p>
-      </div>
-    </div>
+    <app-row *ngFor="let order of orders" [order]="order" (deleteOrder)="deleteOrder($event)"></app-row>
   </div>
 </div>

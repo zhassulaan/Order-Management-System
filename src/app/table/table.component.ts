@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatTableModule } from '@angular/material/table';
 import { FormComponent } from '../form/form.component';
 import { HeaderComponent } from '../header/header.component';
+import { RowComponent } from '../row/row.component';
 import { Order } from '../order.model';
 
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [CommonModule, MatTableModule, FormComponent, HeaderComponent],
+  imports: [CommonModule, FormComponent, HeaderComponent, RowComponent],
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss'
 })
