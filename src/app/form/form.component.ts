@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { ButtonComponent } from '../button/button.component';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [FormsModule, MatInputModule, MatFormFieldModule, MatButtonModule],
+  imports: [FormsModule, MatInputModule, MatFormFieldModule, ButtonComponent],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss'
 })

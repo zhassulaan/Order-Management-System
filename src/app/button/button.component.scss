@@ -1,0 +1,52 @@
+@keyframes button-animation-in {
+  0% {
+    width: 1px;
+    height: 1px;
+  } 100% {
+    width: 400px;
+    height: 400px;
+  }
+}
+@keyframes button-animation-out {
+  0% {
+    width: 400px;
+    height: 400px;
+  } 100% {
+    width: 1px;
+    height: 1px;
+  }
+}
+.button {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 240px;
+  height: 100%;
+  background-color: #007BFF !important;
+  &:hover,
+  &:active {
+    background-color: #007BFF;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s;
+    border-radius: 50%;
+    background-color: #0070E8;
+  }
+  &:active::before,
+  &:hover::before {
+    animation: button-animation-in 2.5s;
+  }
+  &__text {
+    z-index: 2;
+    font-size: 14px;
+    color: #FFF;
+  }
+}
